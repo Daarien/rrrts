@@ -1,0 +1,30 @@
+{
+	"extends": "react-app",
+	"env": {
+		"es6": true,
+		"jquery": true
+	},
+	"settings": {
+		"react": {
+			"version": "16.7"
+		},
+		"import/resolver": {
+			"node": {
+			  "extensions": [
+				".js",
+				".jsx",
+				".ts",
+				".tsx"
+			  ]
+			}
+		  }
+	},
+	"rules": {
+		"no-unused-vars": 1,
+		"no-undef": 2,
+		"no-unused-expressions": 1,
+		"no-restricted-globals": 1,
+		"default-case": 1,
+		"import/no-unresolved": 2
+	}
+}

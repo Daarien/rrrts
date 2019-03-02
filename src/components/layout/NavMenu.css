@@ -1,0 +1,12 @@
+﻿.navbar li .glyphicon {
+    margin-right: 10px;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-brand a:hover {
+    color: rgba(255,255,255, 0.5);
+}
