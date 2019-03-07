@@ -27,7 +27,7 @@ export function Dropdown(props: IDropdown) {
 
 	const show = () => {
 		document.dispatchEvent(new Event('click', { "bubbles": true, "cancelable": false }));
-		menu.current!.style.display = 'block';
+		menu.current!.style!.display = 'block';
 		setTimeout(() => {
 			menu.current!.classList.add('show');
 		}, 0);
@@ -39,7 +39,7 @@ export function Dropdown(props: IDropdown) {
 		if (menu.current) {
 			menu.current.classList.remove('show');
 			setTimeout(() => {
-				menu.current!.style.display = 'none';
+				menu.current!.style!.display = 'none';
 			}, 300);
 		}
 	}

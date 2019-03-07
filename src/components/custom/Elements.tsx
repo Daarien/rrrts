@@ -9,13 +9,17 @@ import { faCoffee, faCheckSquare, faSpinner, faCalculator, faHome, faCloud, faDo
 library.add(faCheckSquare, faCoffee, faSpinner, faCalculator, faHome, faCloud, faDownload, faArrowCircleLeft);
 
 export { LoadingCubes } from './LoadingCubes';
+export { SimpleButton } from './Buttons';
+export { Dropdown } from './Dropdown/Dropdown';
+export { DatePickerX } from './datepicker-x';
+export { NFSLoader } from './NFSLoader';
 
 type FaIcon = {
 	icon: IconProp;
 	size?: SizeProp;
 }
 
-export function FaIcon({icon, ...other}: FaIcon) {
+export function FaIcon({ icon, ...other }: FaIcon) {
 	return <FontAwesomeIcon icon={icon} {...other} />
 }
 
@@ -31,8 +35,8 @@ export function Pulser(props: Spinner) {
 	return <FontAwesomeIcon icon="spinner" pulse {...props} />;
 }
 
-export function ImgIcon({item}: {item: string}) {
-	return <img src={item} style={{width: 20, verticalAlign: -4}} alt='Menu Icon' />;
+export function ImgIcon({ item }: { item: string }) {
+	return <img src={item} style={{ width: 20, verticalAlign: -4 }} alt='Menu Icon' />;
 }
 
 type DataTable = {
@@ -41,7 +45,7 @@ type DataTable = {
 	dark?: boolean;
 }
 
-export function DataTable({children, headers, ...other}: DataTable) {
+export function DataTable({ children, headers, ...other }: DataTable) {
 	headers = headers ? headers : [];
 	return <Table {...other}>
 		<thead>

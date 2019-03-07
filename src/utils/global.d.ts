@@ -1,5 +1,18 @@
-declare module "*.png" {
-	const value: any;
-}
+import { ReactNode, RefObject, CSSProperties } from 'react';
+// export { }
 
-declare type TObj = Record<string, any>;
+declare global {
+	type TObj = Record<string, any>;
+
+	namespace React {
+		interface Attributes {
+			className?: string;
+			children?: ReactNode;
+			ref?: RefObject<Element>;
+		}
+	}
+
+	interface Element {
+		style?: CSSProperties;
+	}
+}
