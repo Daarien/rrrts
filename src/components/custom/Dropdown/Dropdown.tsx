@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { EventHandler, MouseEvent } from 'react';
 import classnames from 'classnames';
 import { SimpleButton } from '../Buttons';
 import './style.scss';
@@ -17,7 +17,7 @@ export function Dropdown(props: IDropdown) {
 	const Wrapper = tag ? tag : 'div';
 	const menu = React.useRef<Element>();
 
-	const toggle = (event: MouseEvent) => {
+	const toggle: EventHandler<MouseEvent> = (event) => {
 		event.stopPropagation();
 		event.preventDefault();
 		const isOpen = menu.current!.classList.contains('show');
