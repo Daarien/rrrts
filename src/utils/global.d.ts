@@ -1,5 +1,4 @@
 import { ReactNode, RefObject, CSSProperties } from 'react';
-// export { }
 
 declare global {
 	type TObj = Record<string, any>;

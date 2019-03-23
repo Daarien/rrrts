@@ -3,8 +3,8 @@ import styled, { ThemeProps } from 'styled-components';
 import { darken } from 'polished'
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
-import { RouteComponentProps } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link, RouteComponentProps } from 'react-router-dom';
+// import { LinkContainer } from 'react-router-bootstrap';
 import { ReduxState, heroes, theme } from '../../../store';
 import { Pulser, FaIcon } from '../../custom/Elements';
 
@@ -31,9 +31,9 @@ class ShowHero extends React.Component<Props> {
 		const selected = data.find(item => item.localized_name === match.params.hero);
 		
 		return <Container>
-			<LinkContainer to='/heroes'>
+			<Link to='/heroes'>
 				<Backward><FaIcon icon='arrow-circle-left' size='2x' /><span>Back to list</span></Backward>
-			</LinkContainer>
+			</Link>
 			{selected && <HeroInfobox>
 				<HeroInfoboxBlurBackground src={heroes.api + selected.img}/>
 				<HeroInfoboxInner>

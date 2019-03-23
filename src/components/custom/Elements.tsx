@@ -35,8 +35,8 @@ export function Pulser(props: Spinner) {
 	return <FontAwesomeIcon icon="spinner" pulse {...props} />;
 }
 
-export function ImgIcon({ item }: { item: string }) {
-	return <img src={item} style={{ width: 20, verticalAlign: -4 }} alt='Menu Icon' />;
+export function ImgIcon({ src }: { src: string }) {
+	return <img src={src} style={{ width: 20, verticalAlign: -4 }} alt='Menu Icon' />;
 }
 
 type DataTable = {
