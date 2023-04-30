@@ -14,7 +14,7 @@
     "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
     "polished": "^3.6.5",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
